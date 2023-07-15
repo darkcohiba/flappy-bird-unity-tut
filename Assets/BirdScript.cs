@@ -6,6 +6,9 @@ public class BirdScript : MonoBehaviour
 {
     public Rigidbody2D myRigidbody;
     public float jumpForce = 10;
+    public LogicScript logic;
+    public bool birdIsAlive = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +18,7 @@ public class BirdScript : MonoBehaviour
     void Update()
     {
         // transform.Rotate(0, 0, Random.Range(0, 360));
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) == true  && birdIsAlive == true)
         {
             jump();
         }
@@ -24,5 +27,11 @@ public class BirdScript : MonoBehaviour
     void jump()
     {
         myRigidbody.velocity = Vector2.up * jumpForce;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        logic.gameOver();
+        birdIsAlive = false;
     }
 }
