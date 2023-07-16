@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CloudSpawnScript : MonoBehaviour
 {
+        public GameObject cloud;
+
     // Start is called before the first frame update
     void Start()
     {
