@@ -39,7 +39,7 @@ public class PipeSpawnScript : MonoBehaviour
         if (elapsedTime >= interval)
         {
             // Perform your actions here
-            Debug.Log("One second has passed!");
+            // Debug.Log("One second has passed!");
             spawnPipe();
 
             // Reset the start time
