@@ -36,7 +36,7 @@ public class CloudSpawnScript : MonoBehaviour
         float lowestPoint = -8.1f;
         float highestPoint = 8.3f;
         float yCoord = Random.Range(lowestPoint, highestPoint);
-        Instantiate(cloud, new Vector3(transform.position.x, yCoord, 0), transform.rotation);
+        Instantiate(cloud, new Vector3(21, yCoord, 0), transform.rotation);
 
     
 
