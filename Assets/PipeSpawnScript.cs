@@ -30,15 +30,15 @@ public class PipeSpawnScript : MonoBehaviour
         float lowestPoint = transform.position.y - heightOffset;
         float highestPoint = transform.position.y + heightOffset;
         float yCoord = Random.Range(lowestPoint, highestPoint);
-        // Debug.Log(yCoord);
+        Debug.Log(yCoord);
         // Debug.Log(transform.position.x);
-        if (yCoord > 8.8)
+        if (yCoord > 8.8f)
         {
-            yCoord = 8.7;
+            yCoord = 8.7f;
         }
-        if (yCoord < -8.5)
+        if (yCoord < -8.5f)
         {
-            yCoord = -8.3;
+            yCoord = -8.3f;
         }
 
 
