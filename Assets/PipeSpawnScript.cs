@@ -29,7 +29,20 @@ public class PipeSpawnScript : MonoBehaviour
     void spawnPipe() {
         float lowestPoint = transform.position.y - heightOffset;
         float highestPoint = transform.position.y + heightOffset;
+        float yCoord = Random.Range(lowestPoint, highestPoint);
+        // Debug.Log(yCoord);
+        // Debug.Log(transform.position.x);
+        if (yCoord > 8.8)
+        {
+            yCoord = 8.7;
+        }
+        if (yCoord < -8.5)
+        {
+            yCoord = -8.3;
+        }
 
-        Instantiate(pipe, new Vector3(transform.position.x, Random.Range(lowestPoint, highestPoint), 0), transform.rotation);
+
+
+        Instantiate(pipe, new Vector3(transform.position.x, yCoord, 0), transform.rotation);
     }
 }
