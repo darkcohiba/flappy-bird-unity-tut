@@ -5,7 +5,7 @@ using UnityEngine;
 public class PipeSpawnScript : MonoBehaviour
 {
     public GameObject pipe;
-    public float spawnRate = 2;
+    public float spawnRate = 10;
     private float timer = 0;
     public float heightOffset = 10;
     // Start is called before the first frame update
@@ -22,7 +22,7 @@ public class PipeSpawnScript : MonoBehaviour
             timer += Time.deltaTime;
         }else {
             spawnPipe();
-            timer = 0;
+            timer = 0f;
         }
     }
 
@@ -32,14 +32,16 @@ public class PipeSpawnScript : MonoBehaviour
         float yCoord = Random.Range(lowestPoint, highestPoint);
         Debug.Log(yCoord);
         // Debug.Log(transform.position.x);
-        if (yCoord > 8.8f)
+        if (yCoord > 8.6f)
         {
-            yCoord = 8.7f;
-        }
-        if (yCoord < -8.5f)
+            yCoord = 8.5f;
+        }else if (yCoord < -5.5f)
         {
-            yCoord = -8.3f;
+            yCoord = -5.3f;
         }
+        Debug.Log(yCoord);
+        Debug.Log("end of spawn");
+
 
 
 
