@@ -5,7 +5,7 @@ using UnityEngine;
 public class BirdScript : MonoBehaviour
 {
     public Rigidbody2D myRigidbody;
-    public float jumpForce = 10;
+    public float jumpForce = 7;
     public LogicScript logic;
     public bool birdIsAlive = true;
 
